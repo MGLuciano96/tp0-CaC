@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <form action="/buscar" method="GET">
+                <input type="text" name="q" placeholder="Buscar productos">
+                <input type="submit" value="Buscar">
+        </nav>
+        <div>
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+
+        <main>
+            <section class="carrito">
+                <h2>Carrito de Compras</h2>
+        
+                <!-- Lista de productos en el carrito -->
+                <ul class="lista-productos">
+                    <li>
+                        <span>Producto 1</span>
+                        <span>Precio: $50.00</span>
+                        <span>Cantidad: 1</span>
+                    </li>
+                    <li>
+                        <span>Producto 2</span>
+                        <span>Precio: $40.00</span>
+                        <span>Cantidad: 2</span>
+                    </li>
+                    <!-- Neceisto q sea dinamico, calcule totales y se puedan quitar productos -->
+                </ul>
+        
+                <!-- Formulario de entrega -->
+                <h3>Información de Entrega</h3>
+                <form action="procesar_pedido.php" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+        
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required><br>
+        
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" required><br>
+        
+                    <label for="codigo-postal">Código Postal:</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal" required><br>
+        
+                    <input type="submit" value="Procesar Pedido">
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Tu Tienda Online</p>
+        </footer>
+        
+        <script src="script.js"></script> <!-- mas js -->
+        
+        </body>
+        </html>
+
+    </header>
+    
+</body>
+</html>
