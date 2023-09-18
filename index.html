@@ -4,40 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online</title>
-    <link rel="stylesheet" href="styles.css"> <!-- css acá -->
+    <link rel="stylesheet" href="/css/index.css"> <!-- css acá -->
 </head>
 <body>
-
-<header>
-    <h1>Bienvenido a nuestra Tienda Online</h1>
-    <nav class="header">
-        <form action="/buscar" method="GET">
-            <input type="text" name="q" placeholder="Buscar productos">
-            <input type="submit" value="Buscar">
-    <nav>
-        <div>
-            <a href="index.html">Inicio</a>
-            <a href="/templates/productos.html">Productos</a>
-            <a href="/templates/carrito.html">Carrito</a>
-            <a href="/templates/contacto.html">Contacto</a>
-        </div>
-    </nav>
+    <header>
+        <h1 class="titulo">Bienvenido a nuestra Tienda Online</h1>
+        <nav class="header">
+            <form action="css/" method="GET" class="form1">
+            <input type="text" name="q" placeholder="Buscar productos..." class="form1_buscador">
+            <input type="submit" value="Buscar" class="form1_buscar" >
+        </form>
+        <nav>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="templates/productos.html">Productos</a>
+                        <ul>
+                            <li><a href="">Calzados</a>
+                        <ul>
+                            <li><a href="/templates/calzadosM.html">Calzados Mujer</a></li>
+                            <li><a href="/templates/calzadosH.html">Calzados Hombre</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Remeras</a>
+                        <ul>
+                            <li><a href="templates/remerasM.html">Remeras Mujer</a></li>
+                            <li><a href="templates/remerasH.html">Remeras Hombre</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Pantalones</a>
+                        <ul>
+                        <li><a href="templates/pantalonesM.html">Pantalones Mujer</a></li>
+                        <li><a href="templates/pantalonesH.html">Pantalones Hombre</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                    </li>
+            <li><a href="/templates/carrito.html" class="carrito-link">Carrito</a></li>
+            <li><a href="/templates/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
 </header>
 
 <main>
-
-    <div class="slider-container">
-        <div class="slide">
-            <img src="imagen1.jpg" alt="Imagen 1">
-        </div>
-        <div class="slide">
-            <img src="imagen2.jpg" alt="Imagen 2">
-        </div>
-        <div class="slide">
-            <img src="imagen3.jpg" alt="Imagen 3">
-        </div>
-    </div>
-
     <section class="productos">
         <article class="producto">
             <img src="producto1.jpg" alt="Producto 1">
@@ -54,15 +64,6 @@
             <p>Precio: $40.00</p>
             <button>Añadir al Carrito</button>
         </article>
-
-        <article class="producto">
-            <img src="producto2.jpg" alt="Producto 2">
-            <h2>Producto 3</h2>
-            <p>Descripción del Producto 3.</p>
-            <p>Precio: $80.00</p>
-            <button>Añadir al Carrito</button>
-        </article>
-
 
         <!-- Mas productos acá? Banner deslizante? -->
     </section>
