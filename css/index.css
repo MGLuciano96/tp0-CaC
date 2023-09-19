@@ -135,4 +135,112 @@ transition: .3s;
     font-weight: bold;
 } */
 
+.conpag {
+    font-family: Arial, sans-serif;
+    background-color: #e9f2f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f4f7f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  /* Estilos para los campos de entrada */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+  /*botón de enviar */
+.contact-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.contact-form input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+.contact-form input[type="reset"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* .piep {
+    display: flex;
+    justify-content: center;
+    color: #276d8d;
+} */
+
+input[type="date"]::webkit-calendar-picker-indicator {
+    background-color: #0056b3;
+}
+
+/* Cambia el color del texto dentro del calendario */
+input[type="date"]::-webkit-calendar-picker-indicator:after {
+    color: #fff;
+}
+
+  /* Cambia el color de fondo de los días de la semana */
+input[type="date"]::-webkit-calendar-picker-indicator:active {
+    background-color: #0056b3;
+}
+
+  /* Cambia el color del borde al seleccionar una fecha */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: center;
+}
+
+  /* Oculta los controles de flecha para subir y bajar el valor de la fecha */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+  /* Oculta la ruedita para elegir edad */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-picker-indicator {
+    display: none;
+}

@@ -1,65 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header>
+        <h1 class="titulo">Contáctenos</h1>
         <nav class="header">
-            <form action="/buscar" method="GET">
-                <input type="text" name="q" placeholder="Buscar productos">
-                <input type="submit" value="Buscar">
-        </nav>
-        <div>
-            <a href="../index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="carrito.html">Carrito</a>
-            <a href="contacto.html">Contacto</a>
+            <form action="css/" method="GET" class="form1">
+            <input type="text" name="q" placeholder="Buscar productos..." class="form1_buscador">
+            <input type="submit" value="Buscar" class="form1_buscar" >
+        </form>
+        <div id="header">
+            <ul class="nav">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="templates/productos.html">Productos</a>
+                    <ul>
+                        <li><a href="">Calzados</a>
+                    <ul>
+                        <li><a href="/templates/calzadosM.html">Calzados Mujer</a></li>
+                        <li><a href="/templates/calzadosH.html">Calzados Hombre</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Remeras</a>
+                    <ul>
+                        <li><a href="templates/remerasM.html">Remeras Mujer</a></li>
+                        <li><a href="templates/remerasH.html">Remeras Hombre</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Pantalones</a>
+                    <ul>
+                    <li><a href="templates/pantalonesM.html">Pantalones Mujer</a></li>
+                    <li><a href="templates/pantalonesH.html">Pantalones Hombre</a></li>
+                </ul>
+                </li>
+            </ul>
+                </li>
+        <li><a href="/templates/carrito.html" class="carrito-link">Carrito</a></li>
+        <li><a href="/templates/contacto.html">Contacto</a></li>
+            </ul>
         </div>
+    </nav>
     </header>
 
     <!-- Contenido formulario -->
-    <main>
+    <main class="conpag">
 
         <form action="https://formspree.io/f/mrgwpnnn" method="post">
 
             <!-- Crear campos para nombre, apellido, fecha de nacimiento
                 y edad.  -->
 
-            <div>
+            <div class="contact-form">
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre. Ej: José">
+                <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre. Ej: José" required>
             </div>
 
             <br>
 
-            <div>
+            <div class="contact-form">
                 <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido. Ej: Perez">
+                <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido. Ej: Perez" required>
             </div>
 
             <br>
 
-            <div>
+            <div class="contact-form">
                 <label for="fn">Fecha de nacimiento:</label>
-                <input type="date" name="fn" id="fn">
+                <input type="date" name="fn" id="fn" min="1940-01-01" max="2023-09-19" required>
             </div>
 
             <br>
 
-            <div>
+            <div class="contact-form">
                 <label for="edad">Edad:</label>
-                <input type="number" name="edad" id="edad" required min="18">
+                <input type="number" name="edad" id="edad" required min="18" required>
+                <input type="submit" value="Validar">
             </div>
-
 
             <hr>
             <br>
 
 
-            <div>
+            <div class="contact-form">
                 <h3>Seleccione el motivo por el que desea contactarse:</h3>
 
 
@@ -80,12 +106,12 @@
                 <!-- Datos -->
                 <legend>Datos personales:</legend>
 
-                <div>
+                <div class="contact-form">
                     <label for="telefono">Teléfono:</label>
                     <input type="tel" name="telefono" id="telefono">
                 </div>
 
-                <div>
+                <div class="contact-form">
                     <label for="email">Correo:</label>
                     <input type="email" name="email" id="email">
                 </div>
@@ -95,7 +121,7 @@
 
             <br>
 
-            <div>
+            <div class="contact-form">
                 <label for="comentario">Comentario:</label>
                 <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Escriba un comentario"></textarea>
             </div>
@@ -104,7 +130,7 @@
             <br>
             <hr>
             
-            <div>
+            <div class="contact-form">
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Borrar">
             </div>
@@ -116,9 +142,9 @@
 
     </main>
 
-    <footer>
-        <h3>Compra-ventas </h3>
+    <!-- <footer>
+        <h3 class="piep">Compra-ventas </h3> por alguna razon queda a mitad de pag, revisar
     </footer>
-    
+    -->
 </body>
 </html>
