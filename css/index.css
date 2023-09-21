@@ -61,6 +61,7 @@ min-height: 60px;
 background: linear-gradient(96.44deg,rgb(197, 213, 255),rgb(226, 240, 255) 51.56%,rgb(215, 212, 255));
 z-index: 1;
 padding: 40px 20px 20px;
+border-radius: 25% 25% 25% 25%;
 }
 
 
@@ -135,4 +136,15 @@ transition: .3s;
     font-weight: bold;
 } */
 
+footer{
+    background-color: rgba(13, 43, 230, 0.8);
+    height: 15vh; 
+    text-align: center; 
+    color: rgba(255, 255, 255, 0.8); 
+    border-radius: 0% 0% 75% 75%
+}
+.texto-footer{
+    padding-top: 7vh;
+    size: 3vw;
 
+}
