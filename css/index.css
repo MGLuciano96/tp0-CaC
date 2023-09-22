@@ -1,20 +1,22 @@
 body {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1200;
+    color: #3f3d3d;
 }
 
-.h1_titulo{
-width: 100%;
--webkit-text-size-adjust: 100%;
-font-family: system-ui;
-margin: 0;
-color: #243238;
-letter-spacing: .05em;
-text-transform: uppercase;
-text-align: center!important;
-font-size: 26px;
-line-height: 30px;
-background: linear-gradient(96.44deg,rgb(197, 213, 255),rgb(226, 240, 255) 51.56%,rgb(215, 212, 255));
-padding: 20px 20px 0px;
+.titulo {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: system-ui;
+    margin: 0;
+    color: #266885;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    text-align: center !important;
+    font-size: 26px;
+    line-height: 30px;
+    background: linear-gradient(96.44deg, rgb(197, 213, 255), rgb(226, 240, 255) 51.56%, rgb(215, 212, 255));
+    padding: 20px 20px 0px;
 }
 
 
@@ -25,7 +27,7 @@ padding: 20px 20px 0px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
 .form1_buscador {
@@ -48,56 +50,55 @@ padding: 20px 20px 0px;
 
 
 
-.header{
-font-family: system-ui;
-line-height: 1.5;
-width: 100%;
-align-items: center;
-position: relative;
-display: flex;
-flex-direction: column;
-margin: auto;
-min-height: 60px;
-background: linear-gradient(96.44deg,rgb(197, 213, 255),rgb(226, 240, 255) 51.56%,rgb(215, 212, 255));
-z-index: 1;
-padding: 40px 20px 20px;
+.header {
+    font-family: system-ui;
+    line-height: 1.5;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 60px;
+    background: linear-gradient(96.44deg, rgb(197, 213, 255), rgb(226, 240, 255) 51.56%, rgb(215, 212, 255));
+    z-index: 1;
+    padding: 40px 20px 20px;
 }
 
 
 
-ul{
-list-style: none;
+ul {
+    list-style: none;
 }
 
-.nav li a{
-background-color: rgb(23, 128, 160);
-color: rgb(0, 0, 0);
-text-decoration: none;
-padding: 5px 10px;
-display: flex;
-
+.nav li a {
+    background-color: rgb(23, 128, 160);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 10px;
+    display: flex;
 }
 
-.nav > li {
+.nav>li {
     float: left;
 }
 
-.nav li a:hover{
-background-color: #276d8d;
-transition: .3s;
+.nav li a:hover {
+    background-color: #276d8d;
+    transition: .3s;
 }
 
-.nav:hover > :not(:hover){
+.nav:hover> :not(:hover) {
     opacity: .4;
 }
 
-.nav li ul{
+.nav li ul {
     display: none;
     position: absolute;
     min-width: 120px;
 }
 
-.nav li:hover > ul{
+.nav li:hover>ul {
     display: block;
 }
 
@@ -110,11 +111,38 @@ transition: .3s;
     top: 0px;
 }
 
-.titulo {
-    display: flex;
-    justify-content: center;
-    color: #276d8d;
+
+
+
+/*main*/
+
+.productos {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0 0 80px;
+   
 }
+.productos img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.producto:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.info-producto {
+    padding-left: 30px;
+
+
+}
+
+
+
 
 /* /* body {
     position: relative; /* Añadido para permitir el posicionamiento absoluto en relación con el body */
@@ -156,7 +184,7 @@ transition: .3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-  /* Estilos para los campos de entrada */
+/* Estilos para los campos de entrada */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
@@ -169,7 +197,7 @@ transition: .3s;
     font-size: 16px;
 }
 
-  /*botón de enviar */
+/*botón de enviar */
 .contact-form input[type="submit"] {
     background-color: #007bff;
     color: #fff;
@@ -223,23 +251,23 @@ input[type="date"]::-webkit-calendar-picker-indicator:after {
     color: #fff;
 }
 
-  /* Cambia el color de fondo de los días de la semana */
+/* Cambia el color de fondo de los días de la semana */
 input[type="date"]::-webkit-calendar-picker-indicator:active {
     background-color: #0056b3;
 }
 
-  /* Cambia el color del borde al seleccionar una fecha */
+/* Cambia el color del borde al seleccionar una fecha */
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: center;
 }
 
-  /* Oculta los controles de flecha para subir y bajar el valor de la fecha */
+/* Oculta los controles de flecha para subir y bajar el valor de la fecha */
 input[type="date"]::-webkit-clear-button {
     display: none;
 }
 
-  /* Oculta la ruedita para elegir edad */
+/* Oculta la ruedita para elegir edad */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-picker-indicator {
     display: none;
