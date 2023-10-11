@@ -19,16 +19,16 @@
             </form>
             <div id="header">
                 <button class="precioymenu">
-                    <a href="index.html">Inicio</a>
+                    <a href="../index.html">Inicio</a>
                 </button>
                 <button class="precioymenu">
-                    <a href="templates/productos.html">Productos</a>
+                    <a href="../templates/productos.html">Productos</a>
                 </button>
                 <button class="precioymenu">
-                    <a href="templates/monitores.html">Monitores</a>
+                    <a href="../templates/monitores.html">Monitores</a>
                 </button>
                 <button class="precioymenu">
-                    <a href="templates/contacto.html">Servicio Técnico</a>
+                    <a href="../templates/contacto.html">Servicio Técnico</a>
                 </button>
             </div>
         </nav>
@@ -37,37 +37,36 @@
     <!-- Contenido formulario -->
     <main class="conpag">
 
-        <form action="https://formspree.io/f/mnqkgzkd" method="post">
-            <!-- falta hacer email empresa para otro formspree -->
+        <form id="formulario" onsubmit="return validarFormulario()" action="https://formspree.io/f/mnqkgzkd" method="post">
 
             <!-- Crear campos para nombre, apellido, fecha de nacimiento
                 y edad.  -->
 
             <div class="contact-form">
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre. Ej: José" required>
+                <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre. Ej: José"> 
             </div>
 
             <br>
 
             <div class="contact-form">
                 <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido. Ej: Perez" required>
+                <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido. Ej: Perez"> 
             </div>
 
             <br>
 
             <div class="contact-form">
                 <label for="fn">Fecha de nacimiento:</label>
-                <input type="date" name="fn" id="fn" min="1940-01-01" max="2023-09-19" required>
+                <input type="date" name="fn" id="fn" min="1940-01-01" max="2023-09-19"> 
             </div>
 
             <br>
 
             <div class="contact-form">
                 <label for="edad">Edad:</label>
-                <input type="number" name="edad" id="edad" required min="18" required>
-                <input type="submit" value="Validar">
+                <input type="number" name="edad" id="edad" > 
+               
             </div>
 
             <hr>
@@ -97,7 +96,7 @@
 
                 <div class="contact-form">
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" name="telefono" id="telefono">
+                    <input type="tel" name="telefono" id="telefono" title="Por favor, solo numeros">
                 </div>
 
                 <div class="contact-form">
@@ -129,16 +128,17 @@
 
 
 
-
+       
     </main>
 
     <footer>
         <h3 class="texto-footer"> Compra-ventas <br>®2023 Silicon Tech </h3>
-        <!-- por alguna razon queda a mitad de pag, revisar -->
+       
 
 
     </footer>
 
+    <script src="../js/contacto.js"></script>
 </body>
 
 </html>
