@@ -137,14 +137,91 @@ transition: .3s;
 } */
 
 footer{
-    background-color: rgba(13, 43, 230, 0.8);
+    background-color: rgba(151, 224, 255, 0.8);
     height: 15vh; 
     text-align: center; 
-    color: rgba(255, 255, 255, 0.8); 
-    border-radius: 0% 0% 75% 75%
+    color: rgba(14, 10, 10, 0.8); 
+    border-radius: 0% 0% 75% 75%;
+    
 }
 .texto-footer{
-    padding-top: 7vh;
-    size: 3vw;
+    padding-top: 5vh;
+    font-size: 1.3vw;
 
+}
+
+/* Estilo contenedor de formulario hasta errores abajo */
+.contact-form {
+    margin: 10px 0; /
+}
+
+
+.contact-form label {
+    font-weight: bold;
+}
+
+/* Estilo entradas */
+.contact-form input[type="text"],
+.contact-form input[type="date"],
+.contact-form input[type="number"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #0b76ce; 
+    border-radius: 40px; 
+    font-size: 16px;
+}
+
+/* Estilo botones */
+.contact-form input[type="submit"],
+.contact-form input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #276d8d; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px; 
+}
+
+/* Estilo botones 1 eleccion */
+.contact-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style form fieldset and legend (for grouping) */
+.contact-form fieldset {
+    border: 20px solid #36af63;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form legend {
+    font-weight: bold;
+}
+
+
+.contact-form textarea {
+    resize: vertical; 
+}
+
+
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo errores de formulario hasta aqui */
+.error-message {
+    color: red; 
+    font-size: 14px; 
 }
