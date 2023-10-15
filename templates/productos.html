@@ -4,36 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online - Productos</title>
-    <link rel="stylesheet" href="styles.css"> <!-- cssss -->
+    <link rel="stylesheet" href="../css/index.css"> <!-- cssss -->
 </head>
 <body>
 
 <header>
-    <h1>Bienvenido a nuestra Tienda Online</h1>
+    <h1 class="titulo">Bienvenido a nuestra Tienda Online</h1>
     <nav class="header">
         <form action="/buscar" method="GET">
             <input type="text" name="q" placeholder="Buscar productos">
             <input type="submit" value="Buscar">
+        </form>
     <nav>
-        <div>
-            <a href="../index.html">Inicio</a></li>
-            <a href="productos.html">Productos</a></li>
-            <a href="carrito.html">Carrito</a></li>
-            <a href="contacto.html">Contacto</a></li>
+        <div id="botonera">
+            <button class="precioymenu">
+                <a href="../index.html">Inicio</a>
+            </button>
+            <button class="precioymenu">
+                <a href="productos.html">Productos</a>
+            </button>
+            <button class="precioymenu">
+                <a href="ayuda.html">Ayuda?</a>
+            </button>
+            <button class="precioymenu">
+                <a href="contacto.html">Servicio Técnico</a>
+            </button>
         </div>
     </nav>
 </header>
 
 <main>
-    <div class="slider-container">
+    <div class="slider">
         <div class="slide">
-            <img src="imagen1.jpg" alt="Imagen 1">
+            <img src="../imagenes/Ofertas Tech - 2.png" alt="Imagen 1">
         </div>
         <div class="slide">
-            <img src="imagen2.jpg" alt="Imagen 2">
+            <img src="../imagenes/Ofertas Tech -1.png" alt="Imagen 2">
         </div>
         <div class="slide">
-            <img src="imagen3.jpg" alt="Imagen 3">
+            <img src="../imagenes/Ofertas Tech - 3.jpeg" alt="Imagen 3">
+        </div>
+        <div class="slide">
+            <img src="../imagenes/Ofertas Tech - 4.jpeg" alt="Imagen 4">
         </div>
     </div>
 
@@ -100,7 +112,7 @@
     <p>&copy; 2023 Tu Tienda Online</p>
 </footer>
 
-<script src="script.js"></script> <!-- jsjs -->
+<script src="../script.js"></script> <!-- jsjs -->
 
 </body>
 </html>

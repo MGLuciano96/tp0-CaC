@@ -1,5 +1,7 @@
 body {
-    margin: 0;
+margin: 0;
+background: rgb(226, 240, 255)
+
 }
 
 .h1_titulo{
@@ -13,37 +15,37 @@ text-transform: uppercase;
 text-align: center!important;
 font-size: 26px;
 line-height: 30px;
-background: linear-gradient(96.44deg,rgb(197, 213, 255),rgb(226, 240, 255) 51.56%,rgb(215, 212, 255));
+background: rgb(226, 240, 255);
 padding: 20px 20px 0px;
 }
 
 
 
 .form1 {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
+width: 100%;
+max-width: 600px;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;   
 }
 
 .form1_buscador {
-    width: 400px;
-    height: 25px;
-    position: relative;
-    align-items: center;
-    border-radius: 5px 0px 0px 5px;
-    border: 1px solid rgb(51, 153, 204);
-    outline: none;
+width: 400px;
+height: 25px;
+position: relative;
+align-items: center;
+border-radius: 5px 0px 0px 5px;
+border: 1px solid rgb(51, 153, 204);
+outline: none;
 }
 
 .form1_buscar {
-    padding: 0.5em 1em;
-    border: none;
-    background: rgb(51, 153, 204);
-    cursor: pointer;
-    border-radius: 0px 5px 5px 0px;
+padding: 0.5em 1em;
+border: none;
+background: rgb(51, 153, 204);
+cursor: pointer;
+border-radius: 0px 5px 5px 0px;
 }
 
 
@@ -58,93 +60,168 @@ display: flex;
 flex-direction: column;
 margin: auto;
 min-height: 60px;
-background: linear-gradient(96.44deg,rgb(197, 213, 255),rgb(226, 240, 255) 51.56%,rgb(215, 212, 255));
+background: rgb(226, 240, 255);
 z-index: 1;
 padding: 40px 20px 20px;
 border-radius: 25% 25% 25% 25%;
 }
 
 
-
-ul{
-list-style: none;
-}
-
-.nav li a{
-background-color: rgb(23, 128, 160);
-color: rgb(0, 0, 0);
-text-decoration: none;
-padding: 5px 10px;
-display: flex;
-
-}
-
-.nav > li {
-    float: left;
-}
-
-.nav li a:hover{
-background-color: #276d8d;
-transition: .3s;
-}
-
-.nav:hover > :not(:hover){
-    opacity: .4;
-}
-
-.nav li ul{
-    display: none;
-    position: absolute;
-    min-width: 120px;
-}
-
-.nav li:hover > ul{
-    display: block;
-}
-
-.nav li ul li {
-    position: relative;
-}
-
-.nav li ul li ul {
-    right: -140px;
-    top: 0px;
-}
-
 .titulo {
-    display: flex;
-    justify-content: center;
-    color: #276d8d;
+display: flex;
+justify-content: center;
+color: #276d8d;
 }
-
-/* /* body {
-    position: relative; /* Añadido para permitir el posicionamiento absoluto en relación con el body */
-
-
-/* .header-content {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.carrito-link {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    margin: 20px;
-    font-weight: bold;
-} */
 
 footer{
-    background-color: rgba(13, 43, 230, 0.8);
-    height: 15vh; 
-    text-align: center; 
-    color: rgba(255, 255, 255, 0.8); 
-    border-radius: 0% 0% 75% 75%
+background-color: rgb(51, 153, 204);
+height: 15vh; 
+text-align: center; 
+color: rgba(14, 10, 10, 0.8); 
+border-radius: 0% 0% 75% 75%;
+
 }
 .texto-footer{
-    padding-top: 7vh;
-    size: 3vw;
+padding-top: 5vh;
+font-size: 1.3vw;
 
+}
+
+/* Estilo contenedor de formulario hasta errores abajo */
+.contact-form {
+margin: 10px 0; /
+}
+
+
+.contact-form label {
+font-weight: bold;
+}
+
+/* Estilo entradas */
+.contact-form input[type="text"],
+.contact-form input[type="date"],
+.contact-form input[type="number"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea {
+width: 100%;
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #0b76ce; 
+border-radius: 40px; 
+font-size: 16px;
+}
+
+/* Estilo botones */
+.contact-form input[type="submit"],
+.contact-form input[type="reset"] {
+padding: 10px 20px;
+background-color: #276d8d; 
+color: #fff;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+font-size: 16px;
+margin-right: 10px; 
+}
+
+/* Estilo botones 1 eleccion */
+.contact-form input[type="radio"] {
+margin-right: 5px;
+}
+
+/* Style form fieldset and legend (for grouping) */
+.contact-form fieldset {
+border: 20px solid #36af63;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+
+.contact-form legend {
+font-weight: bold;
+}
+
+
+.contact-form textarea {
+resize: vertical; 
+}
+
+
+.contact-form select {
+width: 100%;
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+}
+
+/* Estilo errores de formulario hasta aqui */
+.error-message {
+color: red; 
+font-size: 14px; 
+}
+
+button.precioymenu {
+background-color: rgb(51, 153, 204); /* Azul brillante para los botones */
+color: #ffffff; /* Texto blanco para contraste */
+border: none; /* Sin bordes */
+padding: 10px 30px; /* Espacio interno */
+cursor: pointer; /* Cambia el cursor al pasar por encima */
+border-radius: 0px; /* Bordes redondeados */
+font-size: 16px; /* Tamaño del texto */
+}
+
+button.precioymenu:hover {
+color: #fff; /* Texto blanco al pasar el mouse */
+}
+
+/* Estilos para los enlaces dentro de los botones */
+button.precioymenu a {
+color: #000000; /* Texto blanco */
+text-decoration: none; /* Sin subrayado */
+font-size: 16px; /* Tamaño del texto */
+}
+
+/* Estilos para los enlaces cuando se pasan por encima */
+button.precioymenu a:hover {
+text-decoration: none; /* Quita el subrayado al pasar el mouse */
+}
+
+#botonera {
+background-color: rgb(226, 240, 255); /* Azul claro para el fondo */
+padding: 50px; /* Espacio interno alrededor del contenido */
+display: flex; /* Hace que los elementos hijos se distribuyan en línea */
+justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+}
+
+.categoria-header {
+background-color: #333; /* Color de fondo */
+color: #000; /* Color del texto */
+text-decoration: none; /* Quita el subrayado */
+padding: 10px 20px; /* Espaciado interno */
+border-radius: 5px; /* Bordes redondeados */
+}
+
+.categoria-header:hover {
+color: #fff; /* Cambia el color del texto al pasar el mouse */
+}
+
+.slider {
+width: 100%;
+height: 100%;
+display: flex;
+overflow: hidden;
+padding-left: 25%;
+}
+
+.slide {
+min-width: 100%;
+box-sizing: border-box;
+}
+
+img {
+width: 50%; /* La imagen ocupará el 100% del ancho del contenedor */
+height: auto; /* Mantendrá la proporción de la imagen */
 }

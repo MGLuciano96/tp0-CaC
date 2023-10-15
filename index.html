@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online</title>
-    <link rel="shortcut icon" href="../image/cart.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../imagenes/1.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css"> <!-- css acá -->
     <script src="script.js"></script>
 </head>
+
 <body>
     <header>
-        <h1 class="titulo">Bienvenido a nuestra Tienda Online</h1>
+        <h1 class="titulo">Bienvenido a Silicon Tech</h1>
         <nav class="header">
             <form action="css/" method="GET" class="form1">
-            <input type="text" name="q" placeholder="Buscar productos..." class="form1_buscador">
-            <input type="submit" value="Buscar" class="form1_buscar" >
-        </form>
-        <div id="header">
-            <button class="precioymenu">
-                <a href="index.html">Inicio</a>
-            </button>
-            <button class="precioymenu">
-                <a href="templates/productos.html">Productos</a>
-            </button>
-            <button class="precioymenu">
-                <a href="templates/monitores.html">Monitores</a>
-            </button>
-            <button class="precioymenu">
-                <a href="templates/contacto.html">Quienes Somos</a>
-            </button>
-        </div>
+                <input type="text" name="q" placeholder="Buscar productos..." class="form1_buscador">
+                <input type="submit" value="Buscar" class="form1_buscar">
+            </form>
+            <div id="botonera">
+                <button class="precioymenu">
+                    <a href="index.html">Inicio</a>
+                </button>
+                <button class="precioymenu">
+                    <a href="templates/productos.html">Productos</a>
+                </button>
+                <button class="precioymenu">
+                    <a href="templates/ayuda.html">Ayuda</a>
+                </button>
+                <button class="precioymenu">
+                    <a href="templates/contacto.html">Servicio Técnico</a>
+                </button>
+                <button class="precioymenu">
+                    <a href="templates/test.html">Servicio Técnico</a>
+                </button>
+            </div>
         </nav>
-</header>
+    </header>
 
-<main>
-    <section class="productos">
-        <article class="producto">
-            <img src="producto1.jpg" alt="Producto 1">
-            <h2>Producto 1</h2>
-            <p>Descripción del Producto 1.</p>
-            <p>Precio: $50.00</p>
-            <button>Añadir al Carrito</button>
-        </article>
+    <main>
+        <section class="productos">
+            <article class="producto">
+                <img src="producto1.jpg" alt="Producto 1">
+                <h2>Producto 1</h2>
+                <p>Descripción del Producto 1.</p>
+                <p>Precio: $50.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
 
-        <article class="producto">
-            <img src="producto2.jpg" alt="Producto 2">
-            <h2>Producto 2</h2>
-            <p>Descripción del Producto 2.</p>
-            <p>Precio: $40.00</p>
-            <button>Añadir al Carrito</button>
-        </article>
+            <article class="producto">
+                <img src="producto2.jpg" alt="Producto 2">
+                <h2>Producto 2</h2>
+                <p>Descripción del Producto 2.</p>
+                <p>Precio: $40.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
 
-        <!-- Mas productos acá? Banner deslizante? -->
-    </section>
-</main>
+            <!-- Mas productos acá? Banner deslizante? -->
+        </section>
+    </main>
 
-<footer>
-    <h3 class="texto-footer">®2023 Tu Tienda Online</h3>
-    
-</footer>
+    <footer>
+        <h3 class="texto-footer">®2023 Silicon Tech</h3>
+        <i></i>
+        <img src="imagenes/1.png" alt="Logo Silicon" style="width: 5vw;">
+    </footer>
 
-<script src="script.js"></script> <!-- el banner deslizante va a necesitar js, se puede en el tp0? preguntar -->
+    <script src="script.js"></script> <!-- el banner deslizante va a necesitar js, se puede en el tp0? preguntar -->
 
 </body>
+
 </html>
