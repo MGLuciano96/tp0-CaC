@@ -15,7 +15,7 @@ text-transform: uppercase;
 text-align: center!important;
 font-size: 26px;
 line-height: 30px;
-background: rgb(226, 240, 255);
+background:none;
 padding: 20px 20px 0px;
 }
 
@@ -60,7 +60,7 @@ display: flex;
 flex-direction: column;
 margin: auto;
 min-height: 60px;
-background: rgb(226, 240, 255);
+background: none;
 z-index: 1;
 padding: 40px 20px 20px;
 border-radius: 25% 25% 25% 25%;
@@ -190,7 +190,7 @@ text-decoration: none; /* Quita el subrayado al pasar el mouse */
 }
 
 #botonera {
-background-color: rgb(226, 240, 255); /* Azul claro para el fondo */
+background-color:none; /* Azul claro para el fondo */
 padding: 50px; /* Espacio interno alrededor del contenido */
 display: flex; /* Hace que los elementos hijos se distribuyan en línea */
 justify-content: space-around; /* Distribuye los elementos de manera uniforme */
@@ -222,6 +222,79 @@ box-sizing: border-box;
 }
 
 img {
-width: 50%; /* La imagen ocupará el 100% del ancho del contenedor */
-height: auto; /* Mantendrá la proporción de la imagen */
+width: 50%; 
+height: auto; 
+}
+
+
+.seccion-arriba {
+    background-image: url('../imagenes/Banner\ Tech.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    height: 50vh; 
+}
+body {
+    margin: 0;
+    background: rgb(226, 240, 255);
+    background-image: none; 
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.producto {
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.producto h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 1rem;
+}
+
+.producto button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #276d8d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.producto img:hover {
+    transform: scale(1.1);
+}
+
+.producto button:hover {
+    background-color: #144e69;
 }
