@@ -31,12 +31,35 @@
                 <button class="precioymenu">
                     <a href="templates/contacto.html">Servicio Técnico</a>
                 </button>
-                <button class="precioymenu">
-                    <a href="templates/test.html">Servicio Técnico</a>  <!-- Esto para que?-->
-                </button>
             </div>
         </nav>
     </header>
+<!-- Botón para abrir el carrito -->
+<button id="open-cart">Abrir Carrito</button>
+
+<!-- Contenedor del carrito (inicialmente oculto) -->
+<div id="cart-container" class="cart-container">
+    <!-- Imagen en blanco para que puedas agregar tu propia imagen -->
+    <img src="image/cart.ico" alt="Carrito de Compras">
+
+    <!-- Lista de productos (se mostrará cuando haya productos) -->
+    <div class="product-list">
+        <ul id="product-list"></ul>
+    </div>
+
+    <!-- Resumen de la compra -->
+    <div class="cart-summary">
+        <h2>Resumen de la Compra</h2>
+        <p id="subtotal">Subtotal: $0.00</p>
+        <p id="total">Total: $0.00</p>
+    </div>
+
+    <!-- Botón para vaciar el carrito -->
+    <button id="clear-cart">Vaciar Carrito</button>
+    <button id="close-cart">Cerrar Carrito</button> 
+</div>
+
+</body>
 
     <main>
 
@@ -61,15 +84,16 @@
                 <h2>Mouse Óptico Gamer</h2>
                 <p>Mejor conexión por cable para tus juegos</p>
                 <p>Precio: $2500.00</p>
-                <button>Añadir al Carrito</button>
+                <button class="add-to-cart-button" data-id="1" data-nombre="MouseOGamer" data-precio="2500.00">Añadir al Carrito</button>
+                <!-- <button class="remove-from-cart" data-id="1" data-nombre="MouseOGamer" data-precio="2500.00">Remover del Carrito</button> NO FUNCIONA HAY QUE REVISAR -->
             </article>
 
             <article class="producto">
-                <img src="../imagenes/pngwing.com (1).png" alt="placa video">
-                <h2>Placa de video Intel</h2>
-                <p>Velocidad y precisión</p>
-                <p>Precio: $6400.00</p>
-                <button>Añadir al Carrito</button>
+                <img src="../imagenes/pngwing.com (1).png" alt="procesador intel">
+                <h2>Procesaor Intel</h2>
+                <p>Intel i7 7700k</p>
+                <p>Precio: $16400.00</p>
+                <button class="add-to-cart-button" data-id="2" data-nombre="ProcesadorIntel" data-precio="164000.00">Añadir al Carrito</button>
             </article>
 
 
@@ -78,7 +102,7 @@
                 <h2>Auriculares Gamer</h2>
                 <p>Audio de calidad para tus partidas y demás actividades</p>
                 <p>Precio: $5400.00</p>
-                <button>Añadir al Carrito</button>
+                <button class="add-to-cart-button" data-id="3" data-nombre="AuricularG" data-precio="5400.00">Añadir al Carrito</button>
             </article>
 
             <article class="producto">
@@ -86,7 +110,7 @@
                 <h2>Auriculares JBL</h2>
                 <p>La mejor calidad para tus actividades diarias</p>
                 <p>Precio: $1540.00</p>
-                <button>Añadir al Carrito</button>
+                <button class="add-to-cart-button" data-id="4" data-nombre="AuricularG" data-precio="1540.00">Añadir al Carrito</button>
             </article>
 
             <article class="producto">
@@ -96,7 +120,7 @@
                     Tarjetas gráficas opcionales hasta NVIDIA® GeForce RTX™ 3080 <br>
                     Retransmite y ejecuta hasta los mejores juegos de la actualidad como un profesional <br>
                     Pantalla de 16” para no perderte ningún detalle <br></p>
-                <p>Precio: $12400.00</p>
+                <p>Precio: $224000.00</p>
                 <button>Añadir al Carrito</button>
             </article>
 
@@ -121,6 +145,6 @@
 
     <script src="script.js"></script> <!-- el banner deslizante va a necesitar js, se puede en el tp0? preguntar -->
 
-</body>
+
 
 </html>

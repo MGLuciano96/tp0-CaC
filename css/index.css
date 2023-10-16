@@ -226,13 +226,13 @@ width: 50%;
 height: auto; 
 }
 
-
 .seccion-arriba {
     background-image: url('../imagenes/Banner\ Tech.jpeg'); 
     background-size: cover;
     background-position: center;
     height: 50vh; 
 }
+
 body {
     margin: 0;
     background: rgb(226, 240, 255);
@@ -297,4 +297,74 @@ body {
 
 .producto button:hover {
     background-color: #144e69;
+}
+
+/* Estilos para el botón de abrir el carrito */
+#open-cart {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* Alinea el botón a la derecha */
+    transform: translateY(-50%);
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#open-cart:hover {
+    background-color: #1e90ff; /* Azul medio, ajustar el color a los otros botones */
+}
+
+/* Estilos para el contenedor del carrito */
+.cart-container {
+    display: none; /* Inicialmente oculto */
+    background-color: #f0f8ff; /* Tono azul */
+    padding: 20px;
+    border: 2px solid #4682b4; /* Azul acero */
+    border-radius: 10px;
+    position: fixed;
+    top: 50%; /* Lo colocamos en la mitad de la página */
+    right: 20px; /* Lo colocamos en el lado derecho */
+    transform: translateY(-50%); /* Corregimos la posición vertical */
+    max-width: 300px; /* Limitamos el ancho del carrito */
+}
+
+/* Estilos para la lista de productos en el carrito */
+.product-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-list li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #4682b4; /* Azul acero */
+    color: #ffffff; /* Texto blanco para contraste */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #1e90ff; /* Azul medio */
+}
+
+/* Estilos para el botón de vaciar carrito */
+#clear-cart {
+    margin-top: 10px;
+    background-color: #ff6347; /* Rojo tomate */
+}
+
+#clear-cart:hover {
+    background-color: #ff4500; /* Rojo tomate oscuro xD */
 }
