@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Volver a crear la lista de productos en la interfaz
         cartItems.forEach(item => {
             const listItem = document.createElement('li');
-            listItem.textContent = `${item.nombre} - Cantidad: ${item.quantity} - Subtotal: $${(item.precio * item.quantity).toFixed(2)}`;
+            listItem.textContent = `${item.nombre} - Cantidad: ${item.quantity} - Subtotal: $${(item.precio * item.quantity).toFixed(3)}`;
 
             productListElement.appendChild(listItem);
         });
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         totalElement.textContent = `Total: $${subtotal.toFixed(2)}`;
     }
 
-    // Evento de click para agregar productos al carrito
+    // Evento click para agregar productos al carrito
     document.querySelectorAll('.add-to-cart-button').forEach(button => {
         button.addEventListener('click', function() {
             const productId = this.dataset.id;
@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Función para remover un producto del carrito
     function removeFromCart(productId) {
+        console.log("removeFromCart llamada");
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart = cart.filter(item => item.id !== productId);
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -115,6 +116,14 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCartUI();
     }
 
+    // Evento de click para remover productos del carrito
+    document.querySelectorAll('.remove-from-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.dataset.id;
+            removeFromCart(productId);
+        });
+    });
+    
     // Evento de click para remover productos del carrito
     document.getElementById('product-list').addEventListener('click', function(event) {
         if (event.target.classList.contains('remove-from-cart')) {
