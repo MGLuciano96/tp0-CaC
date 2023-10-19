@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <h1>Formulario de Pago</h1>
+
+        <h2>Resumen de la Compra</h2>
+        <ul id="product-list"></ul>
+        <p id="total">Total: $0.00</p>
+
+        <button type="submit">Pagar</button>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const productListElement = document.getElementById('product-list');
+            const totalElement = document.getElementById('total');
+
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const total = localStorage.getItem('total') || '0.00';
+
+            cartItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.nombre} - Cantidad: ${item.quantity} - Subtotal: $${(item.precio * item.quantity).toFixed(2)}`;
+                productListElement.appendChild(listItem);
+            });
+
+            totalElement.textContent = `Total: $${total}`;
+        });
+    </script>
+    <div id="main-container">
+        <div id="card-container">
+            <div id="card">
+                <div id="front">
+                    <div class="reflection"></div>
+                    <div class="type">PLATINUM</div>
+                    <div class="title-text">American Express</div>
+                    <div class="detalles">
+                        <div class="name">Nombre</div>
+                        <p id="hidden-number">1111 XXXX XXXX 1452</p>
+                    </div>
+                    <button id="show-btn">Ver Detalles de Tarjeta</button>
+                    <div class="logo">MasterCard</div>
+                </div>
+                <div id="back">
+                    <div class="reflection"></div>
+                    <div id="chip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="title-text">Nombre del Banco</div>
+                    <div class="detalles">
+                        <div class="name">Nombre</div>
+                        <p id="hidden-number">1111 1223 1223 1452</p>
+                        <span id="cvv">CVV: 402</span>
+                        <span id="valid-date">Expira: 07/29</span>
+                    </div>
+                    <button id="hide-btn">Ocultar Detalles de Tarjeta</button>
+                    <div class="logo">MasterCard</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+

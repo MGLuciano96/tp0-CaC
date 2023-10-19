@@ -29,20 +29,20 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     // Función para agregar un producto al carrito
     function addToCart(product) {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        const existingProduct = cart.find(item => item.id === product.id);
-
-        if (existingProduct) {
-            existingProduct.quantity++;
-        } else {
-            product.quantity = 0;
-            cart.push(product);
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+            const existingProduct = cart.find(item => item.id === product.id);
+        
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                product.quantity = 1;
+                cart.push(product);
+            }
+        
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
         }
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartUI();
-    }
     // Variable para chequear si el carrito está abierto o cerrado
     let isCartOpen = false;
     // Evento de click para abrir/cerrar el carrito
@@ -101,12 +101,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Función para remover un producto del carrito
+    // Función para remover un producto del carrito  // POR ALGUNA RAZON REMUEVE Y AGREGA DE A 2, HAY QUE REVISAR
     function removeFromCart(productId) {
-        console.log("removeFromCart llamada");
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart = cart.filter(item => item.id !== productId);
-        localStorage.setItem('cart', JSON.stringify(cart));
+    
+        const index = cart.findIndex(item => item.id === productId);
+    
+        if (index !== -1) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    
         updateCartUI();
     }
 
@@ -123,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
             removeFromCart(productId);
         });
     });
-    
+
     // Evento de click para remover productos del carrito
     document.getElementById('product-list').addEventListener('click', function(event) {
         if (event.target.classList.contains('remove-from-cart')) {
@@ -137,6 +142,45 @@ document.addEventListener("DOMContentLoaded", function() {
         clearCart();
     });
 
+    // Evento de clic para el botón "Terminar Compra"
+    document.getElementById('checkout').addEventListener('click', function() {
+        // Redireccionar al formulario de pago
+        window.location.href = 'templates/formulariopago.html';
+    });
+
+    function updateCartUI() {
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const productListElement = document.getElementById('product-list');
+    
+        // Limpiar la lista de productos en la interfaz
+        productListElement.innerHTML = '';
+    
+        // Volver a crear la lista de productos en la interfaz
+        cartItems.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.nombre} - Cantidad: ${item.quantity} - Subtotal: $${(item.precio * item.quantity).toFixed(2)}`;
+    
+            productListElement.appendChild(listItem);
+        });
+    
+        // Calcular y mostrar el subtotal y total en la interfaz
+        const subtotal = cartItems.reduce((total, item) => total + (item.precio * item.quantity), 0);
+        const totalElement = document.getElementById('total');
+        totalElement.textContent = `Total: $${subtotal.toFixed(2)}`;
+    
+        // Guardar el total en el localStorage
+        localStorage.setItem('total', subtotal.toFixed(2));
+    }
+
     // Cargar y mostrar el carrito al cargar la página
     updateCartUI();
 });
+
+    //TARJETA
+    flip = ()=> {
+        document.getElementById('card').classList.toggle('flipped')
+        document.querySelector('#front .reflection').classList.toggle('move')
+        document.querySelector('#back .reflection').classList.toggle('move')
+    }
+    document.getElementById('show-btn').addEventListener('click', flip)
+    document.getElementById('hide-btn').addEventListener('click', flip)
