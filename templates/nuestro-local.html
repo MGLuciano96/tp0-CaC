@@ -34,6 +34,33 @@
         </nav>
     </header>
 
+    <button id="open-cart">Abrir Carrito</button>
+
+<!-- Contenedor del carrito (inicialmente oculto) -->
+<div id="cart-container" class="cart-container">
+    <!-- Imagen en blanco para que puedas agregar tu propia imagen (va en el fondo, cambiar el icono del boton) -->
+    <img src="../image/cart.ico" alt="Carrito de Compras">
+
+    <!-- Lista de productos (se mostrará cuando haya productos) -->
+    <div class="product-list">
+        <ul id="product-list"></ul>
+    </div>
+
+    <!-- Resumen de la compra -->
+    <div class="cart-summary">
+        <h2>Resumen de la Compra</h2>
+        <p id="subtotal">Subtotal: $0.00</p>
+        <p id="total">Total: $0.00</p>
+    </div>
+
+    <!-- Botón para vaciar el carrito -->
+    <button id="clear-cart">Vaciar Carrito</button>
+    <button id="close-cart">Cerrar Carrito</button>
+
+    <!-- Nuevo botón "Terminar Compra" -->
+    <button id="checkout">Terminar Compra</button>
+</div>
+
     <main>
 
         <div class="slider">

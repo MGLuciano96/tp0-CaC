@@ -14,7 +14,7 @@
         <h1 class="titulo">¡Bienvenido a Nuestra Tienda de Tecnología!</h1>
         <nav class="header">
             <form action="css/" method="GET" class="form1">
-                <input type="text" name="q" placeholder="¿Qué estás buscando hoy?" class="form1">
+                <input type="text" name="q" placeholder="¿Qué estás buscando hoy?" class="form1_buscador">
                 <input type="submit" value="Buscar" class="form1_buscar"> 
             </form>
             <div id="botonera">
@@ -34,6 +34,36 @@
         </nav>
     </header>
 </body>
+
+<button id="open-cart">Abrir Carrito</button>
+
+<!-- Contenedor del carrito (inicialmente oculto) -->
+<div id="cart-container" class="cart-container">
+    <!-- Imagen en blanco para que puedas agregar tu propia imagen (va en el fondo, cambiar el icono del boton) -->
+    <img src="../image/cart.png" alt="Carrito de Compras">
+
+    <!-- Lista de productos (se mostrará cuando haya productos) -->
+    <div class="product-list">
+        <ul id="product-list"></ul>
+    </div>
+
+    <!-- Resumen de la compra -->
+    <div class="cart-summary">
+        <h2>Resumen de la Compra</h2>
+        <p id="subtotal">Subtotal: $0.00</p>
+        <p id="total">Total: $0.00</p>
+    </div>
+
+    <!-- Botón para vaciar el carrito -->
+    <button id="clear-cart">Vaciar Carrito</button>
+    <button id="close-cart">Cerrar Carrito</button>
+
+    <!-- Nuevo botón "Terminar Compra" -->
+    <button id="checkout">Terminar Compra</button>
+</div>
+
+
+
 <main>
     <div class="slider">
         <div class="slide">
@@ -52,35 +82,41 @@
 
     <section class="productos">
         <article class="producto">
-            <img src="producto1.jpg" alt="Producto 1">
-            <h2>Producto 1</h2>
-            <p>Descripción del Producto 1.</p>
-            <p>Precio: $50.00</p>
-            <button class="comprar">Comprar</button>
+            <img src="../imagenes/auric.png" alt="Auriculares">
+            <h2>Auriculares Thonet & Vander Dauer</h2>
+            <p>Los nuevos auriculares inalámbricos Bluetooth Dauer 2 Gen extienden la duración de su batería hasta 50 horas. <br> 
+                Su diseño ergonómico, con almohadillas y vincha microperforadas, te permiten obtener el mejor nivel de confortabilidad.</p>
+            <p>Precio: $45000.00</p>
+            <button class="add-to-cart-button" data-id="7" data-nombre="AuricularG" data-precio="45000.00">Añadir al Carrito</button>
+            <button class="remove-from-cart" data-id="7" data-nombre="AuricularG"  data-precio="45000.00">Remover del Carrito</button>
         </article>
 
         <article class="producto">
-            <img src="producto2.jpg" alt="Producto 2">
+            <img src="../imagenes/mouse pad.png" alt="MousePad">
             <h2>Producto 2</h2>
             <p>Descripción del Producto 2.</p>
-            <p>Precio: $40.00</p>
-            <button class="comprar">Comprar</button>
+            <p>Precio: $5000.00</p>
+            <button class="add-to-cart-button" data-id="8" data-nombre="MousePad" data-precio="5000.00">Añadir al Carrito</button>
+            <button class="remove-from-cart" data-id="8" data-nombre="MousePad"  data-precio="5000.00">Remover del Carrito</button>
         </article>
 
         <article class="producto">
-            <img src="producto3.jpg" alt="Producto 3">
-            <h2>Producto 3</h2>
-            <p>Descripción del Producto 3.</p>
-            <p>Precio: $60.00</p>
-            <button class="comprar">Comprar</button>
+            <img src="../imagenes/set mouse teclado.png" alt="SetMouseTecl">
+            <h2>Kit Gaming Nbx Teclado y Mouse</h2>
+            <p>Teclado retroiluminado con un mouse pad de fácil limpieza y desplazamiento rápido</p>
+            <p>Precio: $6000.00</p>
+            <button class="add-to-cart-button" data-id="9" data-nombre="SetMouseTecl" data-precio="6000.00">Añadir al Carrito</button>
+            <button class="remove-from-cart" data-id="9" data-nombre="SetMouseTecl" data-precio="6000.00">Remover del Carrito</button>
         </article>
 
         <article class="producto">
-            <img src="producto4.jpg" alt="Producto 4">
-            <h2>Producto 4</h2>
-            <p>Descripción del Producto 4.</p>
-            <p>Precio: $45.00</p>
-            <button class="comprar">Comprar</button>
+            <img src="../imagenes/teclado gamer.png" alt="TecladoG">
+            <h2>Teclado retroiluminado (Rainbow) NBX</h2>
+            <p>Este teclado Noganet de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. 
+                Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo.</p>
+            <p>Precio: $8500.00</p>
+            <button class="add-to-cart-button" data-id="10" data-nombre="TecladoG" data-precio="8500.00">Añadir al Carrito</button>
+            <button class="remove-from-cart" data-id="10" data-nombre="TecladoG" data-precio="8500.00">Remover del Carrito</button>
         </article>
 
         <article class="producto">

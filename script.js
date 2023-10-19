@@ -175,6 +175,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Cargar y mostrar el carrito al cargar la página
     updateCartUI();
 });
+    let listenersSet = false;
+
+    // Funcion para agregar eventos listeners
+    function setEventListeners() {
+        if (!listenersSet) {
+            addProductToCartListener();
+            removeProductFromCartListener();
+            listenersSet = true;
+        }
+    }
+
+    
+    setEventListeners();
 
     //TARJETA
     flip = ()=> {
