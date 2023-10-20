@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Función para remover un producto del carrito  // POR ALGUNA RAZON REMUEVE Y AGREGA DE A 2, HAY QUE REVISAR
+    // Función para remover un producto del carrito  // POR ALGUNA RAZON REMUEVE DE A 2, HAY QUE REVISAR
     function removeFromCart(productId) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
@@ -115,12 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCartUI();
     }
 
-    // Función para vaciar completamente el carrito
-    function clearCart() {
-        localStorage.removeItem('cart');
-        updateCartUI();
-    }
-
     // Evento de click para remover productos del carrito
     document.querySelectorAll('.remove-from-cart').forEach(button => {
         button.addEventListener('click', function() {
@@ -128,14 +122,12 @@ document.addEventListener("DOMContentLoaded", function() {
             removeFromCart(productId);
         });
     });
-
-    // Evento de click para remover productos del carrito
-    document.getElementById('product-list').addEventListener('click', function(event) {
-        if (event.target.classList.contains('remove-from-cart')) {
-            const productId = event.target.dataset.id;
-            removeFromCart(productId);
-        }
-    });
+    
+    // Función para vaciar completamente el carrito
+    function clearCart() {
+        localStorage.removeItem('cart');
+        updateCartUI();
+    }
 
     // Evento de click para vaciar completamente el carrito
     document.getElementById('clear-cart').addEventListener('click', function() {
@@ -146,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('checkout').addEventListener('click', function() {
         // Redireccionar al formulario de pago
         window.location.href = 'templates/formulariopago.html';
+        window.location.href = 'formulariopago.html';
     });
 
     function updateCartUI() {
@@ -166,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Calcular y mostrar el subtotal y total en la interfaz
         const subtotal = cartItems.reduce((total, item) => total + (item.precio * item.quantity), 0);
         const totalElement = document.getElementById('total');
-        totalElement.textContent = `Total: $${subtotal.toFixed(2)}`;
+        totalElement.textContent = `Total: $${total.toFixed(2)}`;
     
         // Guardar el total en el localStorage
         localStorage.setItem('total', subtotal.toFixed(2));
@@ -175,19 +168,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // Cargar y mostrar el carrito al cargar la página
     updateCartUI();
 });
-    let listenersSet = false;
+    // let listenersSet = false;
 
-    // Funcion para agregar eventos listeners
-    function setEventListeners() {
-        if (!listenersSet) {
-            addProductToCartListener();
-            removeProductFromCartListener();
-            listenersSet = true;
-        }
-    }
-
+    // //Funcion para agregar eventos listeners
+    // function setEventListeners() {
+    //     if (!listenersSet) {
+    //         addProductToCartListener();
+    //         removeProductFromCartListener();
+    //         listenersSet = true;
+    //     }
+    // }
     
-    setEventListeners();
+    // setEventListeners();
 
     //TARJETA
     flip = ()=> {
@@ -197,3 +189,34 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     document.getElementById('show-btn').addEventListener('click', flip)
     document.getElementById('hide-btn').addEventListener('click', flip)
+
+    // NOMBRE TARJETA TEST
+    document.addEventListener("DOMContentLoaded", function() {
+        // Obtener referencias a los elementos
+        const inputNombre = document.getElementById('nmbtj');
+        const inputNrotj = document.getElementById('hidden-number');
+        const mostrarNombre = document.getElementById('mostrar-nombre');
+        const mostrarNro = document.getElementById('mostrar-numero');
+        const btnGuardar = document.getElementById('show-btn');
+    
+        // Manejar el evento de clic en el botón
+        btnGuardar.addEventListener('click', function() {
+            const nombre = inputNombre.value; // Obtener el valor del input
+            const nro = inputNrotj.value
+            mostrarNombre.textContent = `${nombre}`; // Mostrar el valor en el elemento
+            mostrarNro.textContent = `${nro}`;
+        });
+    });
+    
+    // POP UP PAGAR
+    document.getElementById('open-success-popup').addEventListener('click', function() {
+        document.querySelector('.success-popup').style.display = 'block';
+    });
+    
+    document.querySelector('.success-popup').addEventListener('click', function() {
+        this.style.display = 'none';
+    });
+    
+    document.querySelector('.content').addEventListener('click', function(event) {
+        event.stopPropagation();
+    });

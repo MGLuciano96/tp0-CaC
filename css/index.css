@@ -48,10 +48,15 @@ body {
     max-width: 75px;
     padding: 0.5em 1em;
     border: none;
-    background: rgb(51, 153, 204);
+    background: #4682b4;
+    color: #fff;
     cursor: pointer;
     border-radius: 0px 5px 5px 0px;
     box-sizing: border-box;
+}
+
+.form1_buscar:hover {
+
 }
 
 
@@ -169,7 +174,7 @@ font-size: 14px;
 }
 
 button.precioymenu {
-background-color: rgb(51, 153, 204); /* Azul brillante para los botones */
+background-color: #4682b4; /* Azul brillante para los botones */
 color: #ffffff; /* Texto blanco para contraste */
 border-radius: 5px 5px 5px 5px; /* Sin bordes */
 padding: 10px 15px; /* Espacio interno */
@@ -179,13 +184,9 @@ cursor: pointer; /* Cambia el cursor al pasar por encima */ /* Bordes redondeado
 /* z-index: 1; */
 }
 
-button.precioymenu:hover {
-color: #fff; /* Texto blanco al pasar el mouse */
-}
-
 /* Estilos para los enlaces dentro de los botones */
 button.precioymenu a {
-color: #000000; /* Texto blanco */
+color: #ffffff; /* Texto blanco */
 text-decoration: none; /* Sin subrayado */
 font-size: 16px; /* Tamaño del texto */
 }
@@ -353,7 +354,7 @@ body {
     position: fixed;
     top: 50%;
     right: 20px; /* Alinea el botón a la derecha */
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     background-color: #4682b4;
     color: #ffffff;
     border: none;
@@ -443,10 +444,10 @@ button:hover {
 /* TARJETA DE PAGO */
 #main-container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 #card-container {
@@ -545,8 +546,8 @@ button:hover {
 #show-btn,
 #hide-btn {
     position: absolute;
-    bottom: 10%;
-    left: 5%;
+    bottom: 25%;
+    left: 60%;
     border: none;
     color: white;
     cursor: pointer;
@@ -597,7 +598,7 @@ button:hover {
     position: absolute;
     background: #e0ab89;
     width: 15%;
-    height: 18;
+    height: 18%;
     border-radius: 5px;
     margin-left: 15px;
     display: flex;
@@ -668,6 +669,7 @@ button:hover {
 .move {
     transform: translateX(700px);
 }
+
 
 /* Estilos para el resumen de compra en una caja */
 #cart-summary {
@@ -742,3 +744,127 @@ button:hover {
     }
 }
 
+/*PRUEBA DE ANIMACION NOMBRE DE TARJETA*/
+
+.form-control {
+    position: relative;
+    margin: -30px 0 40px;
+    width: 160px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 16px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+/* POP UP */
+
+.succes {
+    background-color: #4BB543;
+  }
+  
+  .succes-animation {
+    animation: succes-pulse 2s infinite;
+  }
+  
+  .custom-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    min-height: 250px;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+  
+  .custom-modal .content { 
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+  }
+  
+  .custom-modal .content .type {
+    font-size: 18px;
+    color: #999;
+  }
+  
+  .custom-modal .content .message-type {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  .custom-modal .border-bottom {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    border-radius: 0 0 30px 30px;
+    bottom: -20px;
+    margin: 0 25px;
+  }
+  
+  .custom-modal .icon-top {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -30px;
+    margin: 0 125px;
+    font-size: 30px;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+  }
+  
+  @keyframes succes-pulse { 
+    0% {
+      box-shadow: 0px 0px 30px 20px rgba(75, 181, 67, .2);
+    }
+    50% {
+      box-shadow: 0px 0px 30px 20px rgba(75, 181, 67, .4);
+    }
+    100% {
+      box-shadow: 0px 0px 30px 20px rgba(75, 181, 67, .2);
+    }
+  }
+  
+  body { 
+    margin: 0; 
+    font-family: 'Roboto';
+  }
+  
