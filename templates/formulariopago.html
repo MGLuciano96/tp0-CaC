@@ -7,6 +7,8 @@
     <title>Formulario de Pago</title>
     <link rel="shortcut icon" href="../imagenes/1.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://webuniverse.io/styles.css">
+
 </head>
 
 <body>
@@ -66,37 +68,58 @@
         <ul id="product-list"></ul>
         <p id="total">Total: $0.00</p> -->
 
-
+        <h3>Datos de envío</h3>
 
         <div>
             <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion">
+            <input type="text" id="direccion" name="direccion" required>
         </div>
         <div>
             <label for="city">Ciudad:</label>
-            <input type="text" id="city" name="city">
+            <input type="text" id="city" name="city" required>
         </div>
         <div>
             <label for="codigoP">Código Postal:</label>
-            <input type="text" id="codigoP" name="codigoP">
+            <input type="text" id="codigoP" name="codigoP" pattern="\d+" required>
+            <small>Por favor, solo números.</small>
         </div>
         <div>
             <label for="nombreReceptor">Nombre del Receptor:</label>
-            <input type="text" id="nombreReceptor" name="nombreReceptor">
+            <input type="text" id="nombreReceptor" name="nombreReceptor" required>
         </div>
-
-
+        <button type="button" onclick="validateForm()">Validar</button>
+        
         <button type="submit" id="open-success-popup">Pagar</button>
         <div class="page-wrapper">
             <div class="custom-modal success-popup">
                 <div class="succes succes-animation icon-top"><i class="fa fa-check"></i></div>
                 <div class="succes border-bottom"></div>
                 <div class="content">
-                    <p class="type">Appointment</p>
-                    <p class="message-type">Succesfully Booked</p>
+                    <p class="type">Compra Exitosa</p>
+                    <p class="message-type">Su producto será despachado a la brevedad</p>
                 </div>
             </div>
-    </form>
+        </div>
+        
+        <script>
+            function validateForm() {
+                var direccion = document.querySelector('#direccion').value.trim();
+                var city = document.querySelector('#city').value.trim();
+                var codigoP = document.querySelector('#codigoP').value.trim();
+                var nombreReceptor = document.querySelector('#nombreReceptor').value.trim();
+        
+                if (direccion === "" || city === "" || codigoP === "" || nombreReceptor === "") {
+                    alert("Por favor, complete todos los campos.");
+                    return false;
+                } else {
+                    alert("Datos correctos.");
+                    return true;
+                }
+            }
+        </script>
+        
+        
+        
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const productListElement = document.getElementById('product-list');
