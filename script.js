@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('checkout').addEventListener('click', function() {
         // Redireccionar al formulario de pago
         window.location.href = 'templates/formulariopago.html';
-        window.location.href = 'formulariopago.html';
+        window.location.href = 'formulariopago.html'; //si saco esta linea, funciona bien en el index pero no en productos y viceversa
     });
 
     function updateCartUI() {
@@ -220,3 +220,5 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.content').addEventListener('click', function(event) {
         event.stopPropagation();
     });
+
+    

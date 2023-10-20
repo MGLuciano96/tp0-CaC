@@ -55,10 +55,6 @@ body {
     box-sizing: border-box;
 }
 
-.form1_buscar:hover {
-
-}
-
 
 .header{
 font-family: system-ui;
@@ -419,27 +415,6 @@ button:hover {
     background-color: #ff4500; /* Rojo tomate oscuro xD */
 }
 
-
-
-/* CSS transicion */
-.nuestro-local {
-    width: 500%;
-    max-width: 400px; 
-    height: auto;
-    transition: transform 0.5s;
-    color: #af363a; 
-    text-align: center;
-    /* display: flex; */
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin: 5vw;
-    padding: 5%;
-}
-
-/* CSS efecto hover */
-.nuestro-local:hover {
-    transform: scale(1.1); 
-}
 
 /* TARJETA DE PAGO */
 #main-container {
@@ -868,3 +843,50 @@ button:hover {
     font-family: 'Roboto';
   }
   
+  /* estilos para seccion nuestro local */
+
+.nuestro-local {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.local-info {
+    flex-basis: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #af363a; 
+}
+
+.local-map {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.local-image {
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+    margin: 5vh;
+    margin-left: 5vw;
+}
+
+.local-image:hover {
+    transform: scale(1.1); 
+}
+
+iframe {
+    width: 40%; 
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 5vh;
+    margin-right: 5vw;
+}
+
+
+
+
