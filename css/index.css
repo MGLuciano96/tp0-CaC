@@ -74,6 +74,7 @@ border-radius: 25% 25% 25% 25%;
 
 
 .titulo {
+font-family: system-ui;
 display: flex;
 justify-content: center;
 color: #276d8d;
@@ -948,7 +949,6 @@ iframe {
     border-radius: 20px;
     position: relative;
     border: 2px solid transparent;
-    transition: all 0.5s ease-in-out;
 }
 
 .card:focus-within {
@@ -975,15 +975,22 @@ iframe {
     margin-bottom: 50%;
 }
 
-.card::hover {
-}
-
 .siguenos-text {
-    font-size: 19px; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 2vw; /* Ajusta el tamaño del texto según sea necesario */
     font-family: system-ui;
     color: #3e7288;
     font-weight: bold;
     position: absolute;
-    top: -100px; /* Ajusta la distancia entre el texto y la tarjeta */
+    top: -150px; /* Ajusta la distancia entre el texto y la tarjeta */
     left: 10px; /* Centra el texto horizontalmente */
+}
+
+.prodrec {
+    font-size: 3vw;
+    font-family: system-ui;
+    color: #3e7288;
+    font-weight: bold;
+    position: sticky;
+    left: 20px;
+    transform: translateX(20%);
 }
