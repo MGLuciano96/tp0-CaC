@@ -55,10 +55,6 @@ body {
     box-sizing: border-box;
 }
 
-.form1_buscar:hover {
-
-}
-
 
 .header{
 font-family: system-ui;
@@ -207,7 +203,7 @@ z-index: 1;
 
 @media only screen and (max-width: 768px) {
     #botonera {
-        flex-direction: column; 
+        flex-direction: row; 
     }
     
     button.precioymenu {
@@ -294,6 +290,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    height: fit-content;
 }
 
 .producto {
@@ -310,7 +307,8 @@ body {
 
 .producto img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     border-radius: 5px;
     transition: transform 0.3s;
 }
@@ -354,7 +352,7 @@ body {
     position: fixed;
     top: 50%;
     right: 20px; /* Alinea el botón a la derecha */
-    transform: translateY(-30%);
+    transform: translateY(-50%);
     background-color: #4682b4;
     color: #ffffff;
     border: none;
@@ -362,6 +360,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    z-index: 1001; /* Asegura que esté sobre otros elementos */
+}
+
+#open-cart.active {
+    display: none; /* Oculta el botón cuando el carrito está abierto */
 }
 
 #open-cart:hover {
@@ -376,10 +379,10 @@ body {
     border: 2px solid #4682b4; /* Azul acero */
     border-radius: 10px;
     position: fixed;
-    top: 50%; /* Lo colocamos en la mitad de la página */
+    bottom: 20px; /* Lo colocamos en la parte inferior */
     right: 20px; /* Lo colocamos en el lado derecho */
-    transform: translateY(-50%); /* Corregimos la posición vertical */
     max-width: 300px; /* Limitamos el ancho del carrito */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
 }
 
 /* Estilos para la lista de productos en el carrito */
@@ -419,27 +422,6 @@ button:hover {
     background-color: #ff4500; /* Rojo tomate oscuro xD */
 }
 
-
-
-/* CSS transicion */
-.nuestro-local {
-    width: 500%;
-    max-width: 400px; 
-    height: auto;
-    transition: transform 0.5s;
-    color: #af363a; 
-    text-align: center;
-    /* display: flex; */
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin: 5vw;
-    padding: 5%;
-}
-
-/* CSS efecto hover */
-.nuestro-local:hover {
-    transform: scale(1.1); 
-}
 
 /* TARJETA DE PAGO */
 #main-container {
@@ -864,4 +846,144 @@ button:hover {
 body { 
     margin: 0; 
     font-family: 'Roboto';
+}
+
+  /* estilos para seccion nuestro local */
+
+.local-info {
+    flex-basis: 40%;
+    padding: 10px;
+    color: #af363a; 
+}
+
+.local-map {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.local-image {
+    width: 25%;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+    margin: 2.5vh;
+    margin-left: 2.5vw;
+}
+
+.local-image:hover {
+    transform: scale(1.1); 
+}
+
+iframe {
+    width: 20%; 
+    height: 300px;
+    margin-right: 2.5vh;
+}
+
+.button {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.button:hover::after {
+    filter: blur(30px);
+}
+
+.button:hover::before {
+    transform: rotate(-180deg);
+}
+
+.button:active::before {
+    scale: 0.7;
+}
+
+.card {
+    right: -60vw;
+    top: -60px;
+    width: 290px;
+    height: 64px;
+    background: rgb(226, 240, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:focus-within {
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(27, 27, 27);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.card button {
+    font-size: 34px;
+    background-color: transparent;
+    width: 50px;
+    padding: 7px;
+    height: 50px;
+    border-radius: 100%;
+    transition: all 0.2s ease-in;
+    border: 0;
+    cursor: pointer;
+}
+
+.card button:focus {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50%;
+}
+
+.card::hover {
+}
+
+.siguenos-text {
+    font-size: 19px; /* Ajusta el tamaño del texto según sea necesario */
+    font-family: system-ui;
+    color: #3e7288;
+    font-weight: bold;
+    position: absolute;
+    top: -100px; /* Ajusta la distancia entre el texto y la tarjeta */
+    left: 10px; /* Centra el texto horizontalmente */
 }

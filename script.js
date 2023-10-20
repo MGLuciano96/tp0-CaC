@@ -134,11 +134,22 @@ document.addEventListener("DOMContentLoaded", function() {
         clearCart();
     });
 
-    // Evento de clic para el botón "Terminar Compra"
-    document.getElementById('checkout').addEventListener('click', function() {
-        // Redireccionar al formulario de pago
-        window.location.href = 'templates/formulariopago.html';
+    document.getElementById('open-cart').addEventListener('click', function() {
+        const cartContainer = document.getElementById('cart-container');
+        
+        if (isCartOpen) {
+            // Si el carrito está abierto, lo cerramos
+            cartContainer.style.display = 'none';
+        } else {
+            // Si el carrito está cerrado, lo abrimos
+            cartContainer.style.display = 'block';
+        }
     });
+    
+    document.getElementById('redirect-button').addEventListener('click', function() {
+        window.location.href = '/templates/formulariopago.html';
+    });
+    
 
     function updateCartUI() {
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -218,4 +229,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     document.querySelector('.content').addEventListener('click', function(event) {
         event.stopPropagation();
+    });
+
+    document.getElementById('miFormulario').addEventListener('submit', function(event) {
+        event.preventDefault();
     });

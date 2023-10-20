@@ -13,9 +13,9 @@
     <header class="seccion-arriba">
         <h1 class="titulo">¡Bienvenido a Nuestra Tienda de Tecnología!</h1>
         <nav class="header">
-            <form action="css/" method="GET" class="form1">
+            <form id="miFormulario" action="" method="GET" class="form1">
                 <input type="text" name="q" placeholder="¿Qué estás buscando hoy?" class="form1_buscador">
-                <input type="submit" value="Buscar" class="form1_buscar">
+                <input type="submit" value="Buscar" class="form1_buscar" id="botonBusqueda">
             </form>
             <div id="botonera">
                 <button class="precioymenu">
@@ -32,34 +32,35 @@
                 </button>
             </div>
         </nav>
+
+        <!-- Botón para abrir el carrito -->
+        <button id="open-cart">Abrir Carrito</button>
+
+        <!-- Contenedor del carrito (inicialmente oculto) -->
+            <div id="cart-container" class="cart-container">
+            <!-- Imagen en blanco para que puedas agregar tu propia imagen (va en el fondo, cambiar el icono del boton) -->
+            <img src="image/cart.ico" alt="Carrito de Compras">
+
+            <!-- Lista de productos (se mostrará cuando haya productos) -->
+            <div class="product-list">
+                <ul id="product-list"></ul>
+            </div>
+
+            <!-- Resumen de la compra -->
+            <div class="cart-summary">
+                <h2>Resumen de la Compra</h2>
+                <p id="subtotal">Subtotal: $0.00</p>
+                <p id="total">Total: $0.00</p>
+            </div>
+
+            <!-- Botón para vaciar el carrito -->
+            <button id="clear-cart">Vaciar Carrito</button>
+            <button id="close-cart">Cerrar Carrito</button>
+
+            <!-- Nuevo botón "Terminar Compra" -->
+            <button id="redirect-button">Terminar Compra</button>
+            </div>
     </header>
-<!-- Botón para abrir el carrito -->
-<button id="open-cart">Abrir Carrito</button>
-
-<!-- Contenedor del carrito (inicialmente oculto) -->
-<div id="cart-container" class="cart-container">
-    <!-- Imagen en blanco para que puedas agregar tu propia imagen (va en el fondo, cambiar el icono del boton) -->
-    <img src="image/cart.ico" alt="Carrito de Compras">
-
-    <!-- Lista de productos (se mostrará cuando haya productos) -->
-    <div class="product-list">
-        <ul id="product-list"></ul>
-    </div>
-
-    <!-- Resumen de la compra -->
-    <div class="cart-summary">
-        <h2>Resumen de la Compra</h2>
-        <p id="subtotal">Subtotal: $0.00</p>
-        <p id="total">Total: $0.00</p>
-    </div>
-
-    <!-- Botón para vaciar el carrito -->
-    <button id="clear-cart">Vaciar Carrito</button>
-    <button id="close-cart">Cerrar Carrito</button>
-
-    <!-- Nuevo botón "Terminar Compra" -->
-    <button id="checkout">Terminar Compra</button>
-</div>
 
 </body>
 
@@ -79,6 +80,9 @@
                 <img src="../imagenes/Ofertas Tech - 4.jpeg" alt="Imagen 4">
             </div>
         </div>
+        <section>
+            <h2>PRODUCTOS RECOMENDADOS POR HOY!</h2>
+        </section>
         <section class="productos">
             <article class="producto">
                 <img src="../imagenes/pngwing.com.png" alt="mouse">

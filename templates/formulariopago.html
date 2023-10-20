@@ -7,13 +7,15 @@
     <title>Formulario de Pago</title>
     <link rel="shortcut icon" href="../imagenes/1.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://webuniverse.io/styles.css">
+
 </head>
 
 <body>
     <header class="seccion-arriba">
         <h1 class="titulo">¡Bienvenido a Nuestra Tienda de Tecnología!</h1>
         <nav class="header">
-            <form action="css/" method="GET" class="form1">
+            <form action="" method="GET" class="form1">
                 <input type="text" name="q" placeholder="¿Qué estás buscando hoy?" class="form1_buscador">
                 <input type="submit" value="Buscar" class="form1_buscar">
             </form>
@@ -39,7 +41,7 @@
 <!-- Contenedor del carrito (inicialmente oculto) -->
 <div id="cart-container" class="cart-container">
     <!-- Imagen en blanco para que puedas agregar tu propia imagen (va en el fondo, cambiar el icono del boton) -->
-    <img src="image/cart.ico" alt="Carrito de Compras">
+    <img src="../image/cart.ico" alt="Carrito de Compras">
 
     <!-- Lista de productos (se mostrará cuando haya productos) -->
     <div class="product-list">
@@ -58,25 +60,74 @@
     <button id="close-cart">Cerrar Carrito</button>
 
     <!-- Nuevo botón "Terminar Compra" -->
-    <button id="checkout">Terminar Compra</button>
+    <button id="redirect-button">Terminar Compra</button>
 </div>
     <h1>Formulario de Pago</h1>
 
-        <h2>Resumen de la Compra</h2>
+        <!-- <h2>Resumen de la Compra</h2>
         <ul id="product-list"></ul>
-        <p id="total">Total: $0.00</p>
+        <p id="total">Total: $0.00</p> -->
 
-        <button type="submit" id="open-success-popup">Pagar</button>
+        <h3>Datos de envío</h3>
+
+        <div>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="city">Ciudad:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        
+        <br>
+        <div>
+            <label for="codigoP">Código Postal:</label>
+            <input type="text" id="codigoP" name="codigoP" pattern="\d+" required>
+            
+        </div>
+        
+        <br>
+        <div>
+            <label for="nombreReceptor">Nombre del Receptor:</label>
+            <input type="text" id="nombreReceptor" name="nombreReceptor" required>
+        </div>
+        
+        <br>
+        <button class="button" type="button" onclick="validateForm()">Validar</button>
+        <br><br>
+        <button class="button" type="submit" id="open-success-popup">Pagar</button>
         <div class="page-wrapper">
             <div class="custom-modal success-popup">
                 <div class="succes succes-animation icon-top"><i class="fa fa-check"></i></div>
                 <div class="succes border-bottom"></div>
                 <div class="content">
-                    <p class="type">Compra realizada</p>
-                    <p class="message-type">!Su compra ha sido realizada satisfactoriamente!</p>
+                    <p class="type">Compra Exitosa</p>
+                    <p class="message-type">Su producto será despachado a la brevedad</p>
                 </div>
             </div>
-    </form>
+        </div>
+        
+        <script>
+            function validateForm() {
+                var direccion = document.querySelector('#direccion').value.trim();
+                var city = document.querySelector('#city').value.trim();
+                var codigoP = document.querySelector('#codigoP').value.trim();
+                var nombreReceptor = document.querySelector('#nombreReceptor').value.trim();
+        
+                if (direccion === "" || city === "" || codigoP === "" || nombreReceptor === "") {
+                    alert("Por favor, complete todos los campos.");
+                    return false;
+                } else {
+                    alert("Datos correctos.");
+                    return true;
+                }
+            }
+        </script>
+        
+        
+        
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const productListElement = document.getElementById('product-list');
@@ -143,5 +194,12 @@
 
     <script src="../script.js"></script>
 </body>
+
+<footer>
+    <h3 class="texto-footer">®2023 Silicon Tech</h3>
+    <i></i>
+    <img src="../imagenes/1.png" alt="Logo Silicon" style="width: 5vw;">
+</footer>
+
 </html>
 
