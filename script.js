@@ -138,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('checkout').addEventListener('click', function() {
         // Redireccionar al formulario de pago
         window.location.href = 'templates/formulariopago.html';
-        window.location.href = 'formulariopago.html';
     });
 
     function updateCartUI() {
