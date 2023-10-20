@@ -74,22 +74,30 @@
             <label for="direccion">Dirección:</label>
             <input type="text" id="direccion" name="direccion" required>
         </div>
+        <br>
+
         <div>
             <label for="city">Ciudad:</label>
             <input type="text" id="city" name="city" required>
         </div>
+        
+        <br>
         <div>
             <label for="codigoP">Código Postal:</label>
             <input type="text" id="codigoP" name="codigoP" pattern="\d+" required>
             <small>Por favor, solo números.</small>
         </div>
+        
+        <br>
         <div>
             <label for="nombreReceptor">Nombre del Receptor:</label>
             <input type="text" id="nombreReceptor" name="nombreReceptor" required>
         </div>
-        <button type="button" onclick="validateForm()">Validar</button>
         
-        <button type="submit" id="open-success-popup">Pagar</button>
+        <br>
+        <button class="uiverse-style" type="button" onclick="validateForm()">Validar</button>
+        
+        <button class="uiverse-style" type="submit" id="open-success-popup">Pagar</button>
         <div class="page-wrapper">
             <div class="custom-modal success-popup">
                 <div class="succes succes-animation icon-top"><i class="fa fa-check"></i></div>
