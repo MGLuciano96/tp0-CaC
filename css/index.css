@@ -845,18 +845,9 @@ button:hover {
   
   /* estilos para seccion nuestro local */
 
-.nuestro-local {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
 .local-info {
-    flex-basis: 50%;
-    padding: 20px;
-    box-sizing: border-box;
+    flex-basis: 40%;
+    padding: 10px;
     color: #af363a; 
 }
 
@@ -867,11 +858,11 @@ button:hover {
 
 .local-image {
     width: 25%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s; 
-    margin: 5vh;
-    margin-left: 5vw;
+    margin: 2.5vh;
+    margin-left: 2.5vw;
 }
 
 .local-image:hover {
@@ -879,12 +870,9 @@ button:hover {
 }
 
 iframe {
-    width: 40%; 
-    height: 450px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 5vh;
-    margin-right: 5vw;
+    width: 20%; 
+    height: 300px;
+    margin-right: 2.5vh;
 }
 
 

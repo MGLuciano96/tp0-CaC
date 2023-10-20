@@ -36,30 +36,30 @@
 
     <button id="open-cart">Abrir Carrito</button>
 
-<!-- Contenedor del carrito (inicialmente oculto) -->
-<div id="cart-container" class="cart-container">
-    <!-- Imagen en blanco para que puedas agregar tu propia imagen (va en el fondo, cambiar el icono del boton) -->
-    <img src="../image/cart.ico" alt="Carrito de Compras">
+    <!-- Contenedor del carrito (inicialmente oculto) -->
+    <div id="cart-container" class="cart-container">
+        <!-- Imagen en blanco para que puedas agregar tu propia imagen (va en el fondo, cambiar el icono del boton) -->
+        <img src="../image/cart.ico" alt="Carrito de Compras">
 
-    <!-- Lista de productos (se mostrará cuando haya productos) -->
-    <div class="product-list">
-        <ul id="product-list"></ul>
+        <!-- Lista de productos (se mostrará cuando haya productos) -->
+        <div class="product-list">
+            <ul id="product-list"></ul>
+        </div>
+
+        <!-- Resumen de la compra -->
+        <div class="cart-summary">
+            <h2>Resumen de la Compra</h2>
+            <p id="subtotal">Subtotal: $0.00</p>
+            <p id="total">Total: $0.00</p>
+        </div>
+
+        <!-- Botón para vaciar el carrito -->
+        <button id="clear-cart">Vaciar Carrito</button>
+        <button id="close-cart">Cerrar Carrito</button>
+
+        <!-- Nuevo botón "Terminar Compra" -->
+        <button id="checkout">Terminar Compra</button>
     </div>
-
-    <!-- Resumen de la compra -->
-    <div class="cart-summary">
-        <h2>Resumen de la Compra</h2>
-        <p id="subtotal">Subtotal: $0.00</p>
-        <p id="total">Total: $0.00</p>
-    </div>
-
-    <!-- Botón para vaciar el carrito -->
-    <button id="clear-cart">Vaciar Carrito</button>
-    <button id="close-cart">Cerrar Carrito</button>
-
-    <!-- Nuevo botón "Terminar Compra" -->
-    <button id="checkout">Terminar Compra</button>
-</div>
 
     <main>
 
@@ -87,13 +87,7 @@
             </div>
             <div class="local-map">
                 <img src="../imagenes/Tienda.png" alt="Nuestra Tienda" class="local-image">
-                <iframe 
-                    width="600"
-                    height="450"
-                    style="border:0"
-                    loading="lazy"
-                    allowfullscreen
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13399.043861432492!2d-68.81728966644438!3d-32.90448765559617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ea0bc78593d%3A0x61932a53d62932c7!2sMendoza%20Plaza%20Shopping!5e0!3m2!1sen!2sar!4v1697602777734!5m2!1sen!2sar" frameborder="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13399.043861432492!2d-68.81728966644438!3d-32.90448765559617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ea0bc78593d%3A0x61932a53d62932c7!2sMendoza%20Plaza%20Shopping!5e0!3m2!1sen!2sar!4v1697602777734!5m2!1sen!2sar" frameborder="0"></iframe>
             </div>
         </main>
         <footer>
