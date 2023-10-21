@@ -976,7 +976,7 @@ iframe {
 }
 
 .siguenos-text {
-    font-size: 2vw; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 100%; /* Ajusta el tamaño del texto según sea necesario */
     font-family: system-ui;
     color: #3e7288;
     font-weight: bold;
