@@ -69,26 +69,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Función para actualizar la interfaz del carrito
     function updateCartUI() {
-        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
         const productListElement = document.getElementById('product-list');
-
-        // Limpiar la lista de productos en la interfaz
+        const totalElement = document.getElementById('total');
+    
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const total = cartItems.reduce((total, item) => total + (item.precio * item.quantity), 0).toFixed(2);
+    
         productListElement.innerHTML = '';
-
-        // Volver a crear la lista de productos en la interfaz
+    
         cartItems.forEach(item => {
             const listItem = document.createElement('li');
-            listItem.textContent = `${item.nombre} - Cantidad: ${item.quantity} - Subtotal: $${(item.precio * item.quantity).toFixed(3)}`;
-
+            listItem.textContent = `${item.nombre} - Cantidad: ${item.quantity} - Subtotal: $${(item.precio * item.quantity).toFixed(2)}`;
             productListElement.appendChild(listItem);
         });
-
-        // Calcular y mostrar el subtotal y total en la interfaz
-        // Ver si el subtotal se usa?
-        const subtotal = cartItems.reduce((total, item) => total + (item.precio * item.quantity), 0);
-        const totalElement = document.getElementById('total');
-        totalElement.textContent = `Total: $${subtotal.toFixed(2)}`;
+    
+        totalElement.textContent = `Total: $${total}`;
     }
+    
 
     // Evento click para agregar productos al carrito
     document.querySelectorAll('.add-to-cart-button').forEach(button => {
@@ -96,8 +93,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const productId = this.dataset.id;
             const productName = this.dataset.nombre;
             const productPrice = parseFloat(this.dataset.precio);
-
+    
             addToCart({ id: productId, nombre: productName, precio: productPrice });
+    
+           
         });
     });
 
@@ -122,7 +121,6 @@ document.addEventListener("DOMContentLoaded", function() {
             removeFromCart(productId);
         });
     });
-    
     // Función para vaciar completamente el carrito
     function clearCart() {
         localStorage.removeItem('cart');
@@ -166,32 +164,27 @@ document.addEventListener("DOMContentLoaded", function() {
             productListElement.appendChild(listItem);
         });
     
-        // Calcular y mostrar el subtotal y total en la interfaz
+        // Calcular el subtotal
         const subtotal = cartItems.reduce((total, item) => total + (item.precio * item.quantity), 0);
-        const totalElement = document.getElementById('total');
-        totalElement.textContent = `Total: $${total.toFixed(2)}`;
     
-        // Guardar el total en el localStorage
+        // Mostrar el subtotal en la interfaz
+        const subtotalElement = document.getElementById('subtotal');
+        subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+    
+        // Mostrar el total en la interfaz
+        const totalElement = document.getElementById('total');
+        totalElement.textContent = `Total: $${subtotal.toFixed(2)}`;
+    
+        // Guardar el total final en el localStorage
         localStorage.setItem('total', subtotal.toFixed(2));
     }
+    
+    
 
     // Cargar y mostrar el carrito al cargar la página
     updateCartUI();
 });
-    // let listenersSet = false;
-
-    // //Funcion para agregar eventos listeners
-    // function setEventListeners() {
-    //     if (!listenersSet) {
-    //         addProductToCartListener();
-    //         removeProductFromCartListener();
-    //         listenersSet = true;
-    //     }
-    // }
     
-    // setEventListeners();
-
-    //TARJETA
     flip = ()=> {
         document.getElementById('card').classList.toggle('flipped')
         document.querySelector('#front .reflection').classList.toggle('move')
