@@ -4,8 +4,8 @@ data() {
 return {
 productos:[],
 //url:'http://localhost:5000/productos',
-// si el backend esta corriendo local usar localhost 5000(si no lo subieron a pythonanywhere)
-url:'http://maxig.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
+// si el backend esta corriendo local usar localhost 5000(si no esta en pythonanywhere)
+url:'http://maxig.pythonanywhere.com/productos', // si ya esta en pythonanywhere
 error:false,
 cargando:true,
 /*atributos para el guardar los valores del formulario */

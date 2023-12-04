@@ -11,11 +11,11 @@ function checkLogin() {
     // Verifica los credenciales
     if (username === 'admin' && password === 'admin') {
         alert('Bienvenido, Administrador!');
-      // Redirecciona a la página de administrador o realiza acciones específicas
+      // Redirecciona a la página de administrador
         window.location.href = 'templates/productos_admin.html';
     } else if (username === 'usuario' && password === 'user') {
         alert('Bienvenido, Usuario!');
-      // Redirecciona a la página de usuario o realiza acciones específicas
+      // Redirecciona a la página de usuario
         window.location.href = 'templates/productos_usuario.html';
     } else {
         openPopup('Credenciales incorrectas. Por favor, inténtalo de nuevo.');

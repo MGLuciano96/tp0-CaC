@@ -37,7 +37,7 @@ body {
     object-fit: cover; /* Ajusta el comportamiento del ajuste de la imagen */
 }
 
-/* Otros estilos de tarjetas, si es necesario */
+/* Otros estilos de tarjetas */
 .card {
     margin-bottom: 20px;
 }
