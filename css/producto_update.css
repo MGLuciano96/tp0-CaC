@@ -2,13 +2,13 @@ styles.css
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Bootstrap background color for light mode */
+    background-color: #f8f9fa; /* Bootstrap background color */
 }
 
 #header {
-    background-color: #007bff; /* Bootstrap primary color for the navbar background */
+    background-color: #007bff; /* Bootstrap prim color para navbar  */
     padding: 10px;
-    color: #ffffff; /* White text for better visibility */
+    color: #ffffff; /*texto blanco visibilidad */
 }
 
 main {
@@ -29,7 +29,7 @@ form {
 }
 
 form h2 {
-    color: #007bff; /* Bootstrap primary color for the heading */
+    color: #007bff; /* Bootstrap heading */
 }
 
 form label {
@@ -46,7 +46,7 @@ form input {
 }
 
 form button {
-    background-color: #28a745; /* Bootstrap success color for the button */
+    background-color: #28a745; /* Bootstrap color button */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
