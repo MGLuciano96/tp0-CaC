@@ -1,0 +1,59 @@
+styles.css
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Bootstrap background color for light mode */
+}
+
+#header {
+    background-color: #007bff; /* Bootstrap primary color for the navbar background */
+    padding: 10px;
+    color: #ffffff; /* White text for better visibility */
+}
+
+main {
+    margin-top: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+form {
+    background-color: aliceblue;
+    margin: 10px auto;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    color: #007bff; /* Bootstrap primary color for the heading */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #28a745; /* Bootstrap success color for the button */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838; /* Darker shade for hover effect */
+}
