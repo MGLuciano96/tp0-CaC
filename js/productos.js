@@ -57,7 +57,7 @@ redirect: 'follow'
 fetch(this.url, options)
 .then(function () {
 alert("Producto agregado")
-window.location.href = "./productos_usuario.html";
+window.location.href = "./productos_admin.html";
 })
 .catch(err => {
 console.error(err);

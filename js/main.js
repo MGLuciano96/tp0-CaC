@@ -16,6 +16,9 @@ document.getElementById("header").innerHTML = `
                     <li class="nav-item">
                         <a class="nav-link" href="../loginventa.html">Desloguear</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="productos_usuario.html" aria-current="page">Productos terceriarizados<span
+                            class="visually-hidden">(current)</span?</a>
                 </ul>
                 <form class="d-flex my-2 my-lg-0">
                     <input class="form-control me-sm-2" type="text" placeholder="Buscar..">
