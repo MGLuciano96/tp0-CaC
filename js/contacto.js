@@ -6,7 +6,7 @@ function validarFormulario() {
     var edad = document.getElementById("edad").value.trim();
     var telefono = document.getElementById("telefono").value.trim();
     var email = document.getElementById("email").value.trim();
-  
+
 
     // Verificación de caracteres alfabéticos en nombre y apellido
     var nombreTest = /^[a-zA-Z]+$/.test(nombre);

@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #3498db, #87ceeb, #fff);
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#app {
+    margin-top: 20px;
+}
+
+/* Establece un tamaño fijo para las tarjetas */
+.card {
+    width: 250px; /* Puedes ajustar el tamaño según tus preferencias */
+    height: 100%; /* Haz que todas las tarjetas tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajusta el tamaño de las imágenes dentro de las tarjetas */
+.card-img-top {
+    flex: 1; /* Ocupa todo el espacio disponible verticalmente */
+    width: 100%;
+    object-fit: cover; /* Ajusta el comportamiento del ajuste de la imagen */
+}
+
+/* Otros estilos de tarjetas, si es necesario */
+.card {
+    margin-bottom: 20px;
+}

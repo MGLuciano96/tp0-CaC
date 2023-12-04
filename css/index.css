@@ -1,7 +1,15 @@
 body {
     margin: 0;
-    background: rgb(226, 240, 255);
-    background-image: none; 
+    background: linear-gradient(135deg, #3498db, #87ceeb, #fff);
+    animation: backgroundAnimation 10s infinite alternate;
+}
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 .h1_titulo{
